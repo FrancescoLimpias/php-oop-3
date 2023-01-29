@@ -8,9 +8,21 @@ class Employee extends Person
     private Wage $wage;
     private $employmentDate;
 
-    public function __construct($name, $last, $dateOfBirth, $placeOfBirth, $SSN, Wage $wage)
-    {
-        parent::__construct($name, $last, $dateOfBirth, $placeOfBirth, $SSN);
+    public function __construct(
+        $name,
+        $last,
+        $dateOfBirth,
+        $placeOfBirth,
+        $SSN,
+        Wage $wage
+    ) {
+        parent::__construct(
+            $name,
+            $last,
+            $dateOfBirth,
+            $placeOfBirth,
+            $SSN
+        );
         $this->setWage($wage);
         $this->employmentDate = date("d-m-y");
     }
