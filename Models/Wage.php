@@ -51,4 +51,13 @@ class Wage
             + ($this->getThirteenth() ? $perMonth : 0)
             + ($this->getFourteenth() ? $perMonth : 0);
     }
+
+    public function getHTML()
+    {
+        return
+            "month: " . $this->getPerMonth()
+            . ", 13th: " . ($this->getThirteenth() ? "y" : "n")
+            . ", 14th: " . ($this->getFourteenth() ? "y" : "n")
+            . ", year: " . $this->getAnnualIncome();
+    }
 }
