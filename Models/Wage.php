@@ -55,9 +55,9 @@ class Wage
     public function getHTML()
     {
         return
-            "month: " . $this->getPerMonth()
+            "month: " . $this->getPerMonth() . "€"
             . ", 13th: " . ($this->getThirteenth() ? "y" : "n")
             . ", 14th: " . ($this->getFourteenth() ? "y" : "n")
-            . ", year: " . $this->getAnnualIncome();
+            . ", year: " . $this->getAnnualIncome() . "€";
     }
 }

@@ -23,8 +23,8 @@ class Manager extends Person
             $placeOfBirth,
             $SSN
         );
-        $this->setdividend($dividend);
-        $this->setbonus($bonus);
+        $this->setDividend($dividend);
+        $this->setBonus($bonus);
     }
 
     public function getDividend()
@@ -36,11 +36,11 @@ class Manager extends Person
         $this->dividend = $dividend;
     }
 
-    public function getbonus()
+    public function getBonus()
     {
         return $this->bonus;
     }
-    public function setbonus($bonus)
+    public function setBonus($bonus)
     {
         $this->bonus = $bonus;
     }
@@ -48,5 +48,14 @@ class Manager extends Person
     public function getAnnualIncome()
     {
         return ($this->dividend * 12) + $this->bonus;
+    }
+
+    public function getHTML()
+    {
+        return
+            parent::getHTML()
+            . "<br>" . "dividend: " . $this->getDividend() . "€"
+            . "<br>" . "bonus: " . $this->getBonus() . "€"
+            . "<br>" . "annual income: " . $this->getAnnualIncome() . "€";
     }
 }

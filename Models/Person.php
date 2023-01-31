@@ -67,4 +67,14 @@ class Person
     {
         $this->SSN = $SSN;
     }
+
+    public function getHTML()
+    {
+        return
+            "<br>" . "name: " . $this->getName()
+            . "<br>" . "last: " . $this->getLast()
+            . "<br>" . "dateOfBirth: " . $this->getDateOfBirth()
+            . "<br>" . "placeOfBirth: " . $this->getPlaceOfBirth()
+            . "<br>" . "SSN: " . $this->getSSN();
+    }
 }

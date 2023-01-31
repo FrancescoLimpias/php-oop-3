@@ -44,4 +44,12 @@ class Employee extends Person
     {
         return $this->employmentDate;
     }
+
+    public function getHTML()
+    {
+        return
+            parent::getHTML()
+            . "<br>" . "wage: " . $this->wage->getHTML()
+            . "<br>" . "employment date: " . $this->employmentDate;
+    }
 }
